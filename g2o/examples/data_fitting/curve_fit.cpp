@@ -45,7 +45,7 @@ G2O_USE_OPTIMIZATION_LIBRARY(dense);
  */
 class VertexParams : public g2o::BaseVertex<3, Eigen::Vector3d> {
  public:
-  EIGEN_MAKE_ALIGNED_OPERATOR_NEW;
+  EIGEN_MAKE_ALIGNED_OPERATOR_NEW
   VertexParams() {}
 
   bool read(std::istream& /*is*/) override { return false; }

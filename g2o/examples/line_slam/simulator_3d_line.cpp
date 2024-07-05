@@ -79,7 +79,7 @@ struct Sensor {
 typedef std::vector<Sensor*> SensorVector;
 
 struct Robot : public WorldItem {
-  EIGEN_MAKE_ALIGNED_OPERATOR_NEW;
+  EIGEN_MAKE_ALIGNED_OPERATOR_NEW
 
   Robot(OptimizableGraph* graph_) : WorldItem(graph_) {
     _planarMotion = false;
@@ -181,7 +181,7 @@ struct LineItem : public WorldItem {
 };
 
 struct LineSensor : public Sensor {
-  EIGEN_MAKE_ALIGNED_OPERATOR_NEW;
+  EIGEN_MAKE_ALIGNED_OPERATOR_NEW
 
   LineSensor(Robot* r, int offsetId, const Isometry3d& offset_) : Sensor(r) {
     _offsetVertex = new VertexSE3();

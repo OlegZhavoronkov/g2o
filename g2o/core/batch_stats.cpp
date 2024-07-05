@@ -82,7 +82,7 @@ std::ostream& operator<<(std::ostream& os, const G2OBatchStatistics& st) {
   os << PTHING(timeMarginals);
 
   return os;
-};
+}
 
 void G2OBatchStatistics::setGlobalStats(G2OBatchStatistics* b) {
   _globalStats = b;

@@ -35,7 +35,7 @@ using namespace Eigen;
 
 namespace g2o {
 
-G2O_REGISTER_TYPE_GROUP(icp);
+G2O_REGISTER_TYPE_GROUP(icp)
 G2O_REGISTER_TYPE(EDGE_V_V_GICP, Edge_V_V_GICP);
 
 namespace types_icp {

@@ -38,7 +38,7 @@ namespace g2o {
 class G2O_TYPES_SBA_API EdgeProjectXYZ2UV
     : public BaseBinaryEdge<2, Vector2, VertexPointXYZ, VertexSE3Expmap> {
  public:
-  EIGEN_MAKE_ALIGNED_OPERATOR_NEW;
+  EIGEN_MAKE_ALIGNED_OPERATOR_NEW
 
   EdgeProjectXYZ2UV();
   bool read(std::istream& is);

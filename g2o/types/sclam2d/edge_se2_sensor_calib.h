@@ -39,7 +39,7 @@ namespace g2o {
 class G2O_TYPES_SCLAM2D_API EdgeSE2SensorCalib
     : public BaseFixedSizedEdge<3, SE2, VertexSE2, VertexSE2, VertexSE2> {
  public:
-  EIGEN_MAKE_ALIGNED_OPERATOR_NEW;
+  EIGEN_MAKE_ALIGNED_OPERATOR_NEW
   EdgeSE2SensorCalib();
 
   void computeError() {

@@ -42,7 +42,7 @@ namespace g2o {
  */
 class G2O_TYPES_DATA_API RobotLaser : public RawLaser {
  public:
-  EIGEN_MAKE_ALIGNED_OPERATOR_NEW;
+  EIGEN_MAKE_ALIGNED_OPERATOR_NEW
   RobotLaser();
   ~RobotLaser();
 

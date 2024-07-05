@@ -40,7 +40,7 @@ namespace tutorial {
  */
 class G2O_TUTORIAL_SLAM2D_API VertexSE2 : public BaseVertex<3, SE2> {
  public:
-  EIGEN_MAKE_ALIGNED_OPERATOR_NEW;
+  EIGEN_MAKE_ALIGNED_OPERATOR_NEW
   VertexSE2();
 
   virtual void setToOriginImpl() { _estimate = SE2(); }

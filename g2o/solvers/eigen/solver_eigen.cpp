@@ -95,7 +95,7 @@ class EigenSolverCreator : public AbstractOptimizationAlgorithmCreator {
 };
 
 // clang-format off
-  G2O_REGISTER_OPTIMIZATION_LIBRARY(eigen);
+  G2O_REGISTER_OPTIMIZATION_LIBRARY(eigen)
 
   G2O_REGISTER_OPTIMIZATION_ALGORITHM(gn_var, new EigenSolverCreator(OptimizationAlgorithmProperty("gn_var", "Gauss-Newton: Cholesky solver using Eigen's Sparse Cholesky methods (variable blocksize)", "Eigen", false, Eigen::Dynamic, Eigen::Dynamic)));
   G2O_REGISTER_OPTIMIZATION_ALGORITHM(gn_fix3_2, new EigenSolverCreator(OptimizationAlgorithmProperty("gn_fix3_2", "Gauss-Newton: Cholesky solver using  Eigen's Sparse Cholesky (fixed blocksize)", "Eigen", true, 3, 2)));

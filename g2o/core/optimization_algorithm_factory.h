@@ -182,7 +182,7 @@ class RegisterOptimizationAlgorithmProxy {
   extern "C" void G2O_OAF_EXPORT g2o_optimization_algorithm_##optimizername( \
       void) {}                                                               \
   static g2o::RegisterOptimizationAlgorithmProxy                             \
-      g_optimization_algorithm_proxy_##optimizername(instance);
+      g_optimization_algorithm_proxy_##optimizername(instance)
 
 /**
  * see the documentation of the macros above.

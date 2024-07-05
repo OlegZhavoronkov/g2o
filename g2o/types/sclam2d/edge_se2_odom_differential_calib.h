@@ -39,7 +39,7 @@ class G2O_TYPES_SCLAM2D_API EdgeSE2OdomDifferentialCalib
     : public BaseFixedSizedEdge<3, VelocityMeasurement, VertexSE2, VertexSE2,
                                 VertexOdomDifferentialParams> {
  public:
-  EIGEN_MAKE_ALIGNED_OPERATOR_NEW;
+  EIGEN_MAKE_ALIGNED_OPERATOR_NEW
   EdgeSE2OdomDifferentialCalib();
 
   void computeError() {

@@ -147,7 +147,7 @@ class RegisterTypeProxy {
 // These macros are used to automate registering types and forcing linkage
 #define G2O_REGISTER_TYPE(name, classname)                         \
   extern "C" void G2O_FACTORY_EXPORT g2o_type_##classname(void) {} \
-  static g2o::RegisterTypeProxy<classname> g_type_proxy_##classname(#name);
+  static g2o::RegisterTypeProxy<classname> g_type_proxy_##classname(#name)
 
 #define G2O_USE_TYPE_BY_CLASS_NAME(classname)                    \
   extern "C" void G2O_FACTORY_IMPORT g2o_type_##classname(void); \
@@ -159,6 +159,6 @@ class RegisterTypeProxy {
 #define G2O_USE_TYPE_GROUP(typeGroupName)                                  \
   extern "C" void G2O_FACTORY_IMPORT g2o_type_group_##typeGroupName(void); \
   static g2o::ForceLinker g2o_force_type_link_##typeGroupName(             \
-      g2o_type_group_##typeGroupName);
+      g2o_type_group_##typeGroupName)
 
 #endif

@@ -41,7 +41,7 @@ class G2O_TYPES_SLAM2D_API EdgeSE2LotsOfXY
   unsigned int _observedPoints;
 
  public:
-  EIGEN_MAKE_ALIGNED_OPERATOR_NEW;
+  EIGEN_MAKE_ALIGNED_OPERATOR_NEW
   EdgeSE2LotsOfXY();
 
   void setSize(int vertices) {

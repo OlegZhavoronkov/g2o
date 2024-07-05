@@ -33,7 +33,7 @@
 
 namespace g2o {
 
-G2O_REGISTER_TYPE_GROUP(slam3d);
+G2O_REGISTER_TYPE_GROUP(slam3d)
 
 // clang-format off
 // otherwise it will result in non-working "VERTEX_SE3 : QUAT"
@@ -58,7 +58,7 @@ G2O_REGISTER_TYPE(EDGE_PROJECT_DEPTH, EdgeSE3PointXYZDepth);
 G2O_REGISTER_TYPE(EDGE_POINTXYZ, EdgePointXYZ);
 G2O_REGISTER_TYPE(EDGE_POINTXYZ_PRIOR, EdgeXYZPrior);
 
-G2O_REGISTER_TYPE(EDGE_SE3_LOTSOF_XYZ, EdgeSE3LotsOfXYZ)
+G2O_REGISTER_TYPE( EDGE_SE3_LOTSOF_XYZ , EdgeSE3LotsOfXYZ );
 
 /*********** ACTIONS ************/
 G2O_REGISTER_ACTION(VertexSE3WriteGnuplotAction);

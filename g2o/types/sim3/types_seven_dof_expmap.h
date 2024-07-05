@@ -67,7 +67,7 @@ template class BaseVertex<7, Sim3>;
  */
 class G2O_TYPES_SIM3_API VertexSim3Expmap : public BaseVertex<7, Sim3> {
  public:
-  EIGEN_MAKE_ALIGNED_OPERATOR_NEW;
+  EIGEN_MAKE_ALIGNED_OPERATOR_NEW
   VertexSim3Expmap();
   virtual bool read(std::istream& is);
   virtual bool write(std::ostream& os) const;

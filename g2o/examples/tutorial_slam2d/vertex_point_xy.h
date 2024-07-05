@@ -39,7 +39,7 @@ namespace tutorial {
 class G2O_TUTORIAL_SLAM2D_API VertexPointXY
     : public BaseVertex<2, Eigen::Vector2d> {
  public:
-  EIGEN_MAKE_ALIGNED_OPERATOR_NEW;
+  EIGEN_MAKE_ALIGNED_OPERATOR_NEW
   VertexPointXY();
 
   virtual void setToOriginImpl() { _estimate.setZero(); }

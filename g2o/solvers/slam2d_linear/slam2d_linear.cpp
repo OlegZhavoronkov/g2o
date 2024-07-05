@@ -66,7 +66,7 @@ class SLAM2DLinearSolverCreator : public AbstractOptimizationAlgorithmCreator {
   }
 };
 
-G2O_REGISTER_OPTIMIZATION_LIBRARY(slam2d_linear);
+G2O_REGISTER_OPTIMIZATION_LIBRARY(slam2d_linear)
 
 G2O_REGISTER_OPTIMIZATION_ALGORITHM(
     2dlinear,

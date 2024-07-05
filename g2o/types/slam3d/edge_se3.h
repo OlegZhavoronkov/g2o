@@ -43,7 +43,7 @@ namespace g2o {
 class G2O_TYPES_SLAM3D_API EdgeSE3
     : public BaseBinaryEdge<6, Isometry3, VertexSE3, VertexSE3> {
  public:
-  EIGEN_MAKE_ALIGNED_OPERATOR_NEW;
+  EIGEN_MAKE_ALIGNED_OPERATOR_NEW
   EdgeSE3();
   virtual bool read(std::istream& is);
   virtual bool write(std::ostream& os) const;

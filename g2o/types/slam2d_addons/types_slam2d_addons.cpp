@@ -33,7 +33,7 @@
 
 namespace g2o {
 
-G2O_REGISTER_TYPE_GROUP(slam2d_segment);
+G2O_REGISTER_TYPE_GROUP(slam2d_segment)
 
 G2O_REGISTER_TYPE(VERTEX_SEGMENT2D, VertexSegment2D);
 G2O_REGISTER_TYPE(VERTEX_LINE2D, VertexLine2D);

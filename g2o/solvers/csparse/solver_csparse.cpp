@@ -84,7 +84,7 @@ class CSparseSolverCreator : public AbstractOptimizationAlgorithmCreator {
 };
 
 // clang-format off
-  G2O_REGISTER_OPTIMIZATION_LIBRARY(csparse);
+  G2O_REGISTER_OPTIMIZATION_LIBRARY(csparse)
 
   G2O_REGISTER_OPTIMIZATION_ALGORITHM(gn_var_csparse, new CSparseSolverCreator(OptimizationAlgorithmProperty("gn_var_csparse", "Gauss-Newton: Cholesky solver using CSparse (variable blocksize)", "CSparse", false, Eigen::Dynamic, Eigen::Dynamic)));
   G2O_REGISTER_OPTIMIZATION_ALGORITHM(gn_fix3_2_csparse, new CSparseSolverCreator(OptimizationAlgorithmProperty("gn_fix3_2_csparse", "Gauss-Newton: Cholesky solver using CSparse (fixed blocksize)", "CSparse", true, 3, 2)));

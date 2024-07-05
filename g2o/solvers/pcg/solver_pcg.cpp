@@ -80,7 +80,7 @@ class PCGSolverCreator : public AbstractOptimizationAlgorithmCreator {
   }
 };
 
-G2O_REGISTER_OPTIMIZATION_LIBRARY(pcg);
+G2O_REGISTER_OPTIMIZATION_LIBRARY(pcg)
 
 G2O_REGISTER_OPTIMIZATION_ALGORITHM(
     gn_pcg, new PCGSolverCreator(OptimizationAlgorithmProperty(

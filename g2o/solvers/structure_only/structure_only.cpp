@@ -54,7 +54,7 @@ class StructureOnlyCreator : public AbstractOptimizationAlgorithmCreator {
   }
 };
 
-G2O_REGISTER_OPTIMIZATION_LIBRARY(structure_only);
+G2O_REGISTER_OPTIMIZATION_LIBRARY(structure_only)
 
 G2O_REGISTER_OPTIMIZATION_ALGORITHM(
     structure_only_2,

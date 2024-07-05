@@ -39,7 +39,7 @@ typedef Eigen::Matrix<double, 6, 6> Matrix6;
 typedef Eigen::Matrix<double, 6, 4> Matrix6x4;
 
 struct OrthonormalLine3D {
-  EIGEN_MAKE_ALIGNED_OPERATOR_NEW;
+  EIGEN_MAKE_ALIGNED_OPERATOR_NEW
   Matrix2 W;
   Matrix3 U;
 
@@ -52,7 +52,7 @@ typedef struct OrthonormalLine3D OrthonormalLine3D;
 
 class Line3D : public Vector6 {
  public:
-  EIGEN_MAKE_ALIGNED_OPERATOR_NEW;
+  EIGEN_MAKE_ALIGNED_OPERATOR_NEW
 
   G2O_TYPES_SLAM3D_ADDONS_API friend Line3D operator*(const Isometry3& t,
                                                       const Line3D& line);

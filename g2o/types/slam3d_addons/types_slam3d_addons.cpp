@@ -34,7 +34,7 @@
 
 namespace g2o {
 
-G2O_REGISTER_TYPE_GROUP(slam3d_addons);
+G2O_REGISTER_TYPE_GROUP(slam3d_addons)
 
 G2O_REGISTER_TYPE(VERTEX3, VertexSE3Euler);
 G2O_REGISTER_TYPE(EDGE3, EdgeSE3Euler);

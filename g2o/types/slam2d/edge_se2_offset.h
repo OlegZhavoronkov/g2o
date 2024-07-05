@@ -43,7 +43,7 @@ class CacheSE2Offset;
 class G2O_TYPES_SLAM2D_API EdgeSE2Offset
     : public BaseBinaryEdge<3, SE2, VertexSE2, VertexSE2> {
  public:
-  EIGEN_MAKE_ALIGNED_OPERATOR_NEW;
+  EIGEN_MAKE_ALIGNED_OPERATOR_NEW
   EdgeSE2Offset();
   virtual bool read(std::istream& is);
   virtual bool write(std::ostream& os) const;

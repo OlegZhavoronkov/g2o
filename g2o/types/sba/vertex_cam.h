@@ -42,7 +42,7 @@ namespace g2o {
  */
 class G2O_TYPES_SBA_API VertexCam : public BaseVertex<6, SBACam> {
  public:
-  EIGEN_MAKE_ALIGNED_OPERATOR_NEW;
+  EIGEN_MAKE_ALIGNED_OPERATOR_NEW
   VertexCam();
 
   virtual bool read(std::istream& is);

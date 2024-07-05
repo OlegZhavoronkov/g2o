@@ -230,4 +230,4 @@ double UniformCostFunction::operator()(HyperGraph::Edge* /*edge*/,
   return 1.;
 }
 
-};  // namespace g2o
+}  // namespace g2o

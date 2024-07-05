@@ -58,7 +58,7 @@ double errorOfSolution(int numPoints, Eigen::Vector2d* points,
  */
 class VertexCircle : public g2o::BaseVertex<3, Eigen::Vector3d> {
  public:
-  EIGEN_MAKE_ALIGNED_OPERATOR_NEW;
+  EIGEN_MAKE_ALIGNED_OPERATOR_NEW
   VertexCircle() {}
 
   bool read(std::istream& /*is*/) override { return false; }

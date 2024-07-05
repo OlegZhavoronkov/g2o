@@ -133,7 +133,7 @@ class BaseFixedSizedEdge : public BaseEdge<D, E> {
   template <int VertexN>
   static constexpr int VertexDimension() {
     return VertexXnType<VertexN>::Dimension;
-  };
+  }
   /**
    * Get the size of a given Vertex.
    * If the vertex dimension is static and by this known at compile time, we
@@ -143,11 +143,11 @@ class BaseFixedSizedEdge : public BaseEdge<D, E> {
   template <int VertexN>
   constexpr typename std::enable_if<VertexXnType<VertexN>::Dimension != -1, int>::type vertexDimension() const {
     return VertexXnType<VertexN>::Dimension;
-  };
+  }
   template <int VertexN>
   typename std::enable_if<VertexXnType<VertexN>::Dimension == -1, int>::type vertexDimension() const {
     return vertexXn<VertexN>()->dimension();
-  };
+  }
   // clang-format on
   /**
    * Return a pointer to the N-th vertex, directly casted to the correct type
@@ -223,7 +223,7 @@ class BaseFixedSizedEdge : public BaseEdge<D, E> {
         sizeof...(VertexTypes) - 1,
         typename std::remove_reference<decltype(*this)>::type, CtorArgs...>(
         i, *this, args...);
-  };
+  }
 
   virtual void resize(size_t size);
 

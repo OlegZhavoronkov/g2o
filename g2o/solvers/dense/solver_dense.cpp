@@ -80,7 +80,7 @@ class DenseSolverCreator : public AbstractOptimizationAlgorithmCreator {
   }
 };
 
-G2O_REGISTER_OPTIMIZATION_LIBRARY(dense);
+G2O_REGISTER_OPTIMIZATION_LIBRARY(dense)
 
 G2O_REGISTER_OPTIMIZATION_ALGORITHM(
     gn_dense, new DenseSolverCreator(OptimizationAlgorithmProperty(

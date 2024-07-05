@@ -127,7 +127,7 @@ void BaseFixedSizedEdge<D, E, VertexTypes...>::constructQuadraticFormN(
     constructOffDiagonalQuadraticFormMs<N>(
         AtO, std::make_index_sequence<_nr_of_vertices - N - 1>());
   }
-};
+}
 
 template <int D, typename E, typename... VertexTypes>
 void BaseFixedSizedEdge<D, E, VertexTypes...>::linearizeOplus(

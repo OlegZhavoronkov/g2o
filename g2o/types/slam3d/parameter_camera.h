@@ -37,7 +37,7 @@ namespace g2o {
  */
 class G2O_TYPES_SLAM3D_API ParameterCamera : public ParameterSE3Offset {
  public:
-  EIGEN_MAKE_ALIGNED_OPERATOR_NEW;
+  EIGEN_MAKE_ALIGNED_OPERATOR_NEW
   ParameterCamera();
   void setKcam(double fx, double fy, double cx, double cy);
   void setOffset(const Isometry3& offset_ = Isometry3::Identity());
@@ -57,7 +57,7 @@ class G2O_TYPES_SLAM3D_API ParameterCamera : public ParameterSE3Offset {
 
 class G2O_TYPES_SLAM3D_API CacheCamera : public CacheSE3Offset {
  public:
-  EIGEN_MAKE_ALIGNED_OPERATOR_NEW;
+  EIGEN_MAKE_ALIGNED_OPERATOR_NEW
   //! parameters of the camera
   const ParameterCamera* camParams() const { return params; }
   //! return the world to image transform

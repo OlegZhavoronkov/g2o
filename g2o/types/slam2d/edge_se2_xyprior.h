@@ -40,7 +40,7 @@ namespace g2o {
 class G2O_TYPES_SLAM2D_API EdgeSE2XYPrior
     : public BaseUnaryEdge<2, Vector2, VertexSE2> {
  public:
-  EIGEN_MAKE_ALIGNED_OPERATOR_NEW;
+  EIGEN_MAKE_ALIGNED_OPERATOR_NEW
   EdgeSE2XYPrior();
 
   virtual bool setMeasurementData(const double* d) {

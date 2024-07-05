@@ -92,7 +92,7 @@ class CholmodSolverCreator : public AbstractOptimizationAlgorithmCreator {
   }
 };
 
-G2O_REGISTER_OPTIMIZATION_LIBRARY(cholmod);
+G2O_REGISTER_OPTIMIZATION_LIBRARY(cholmod)
 
 G2O_REGISTER_OPTIMIZATION_ALGORITHM(
     gn_var_cholmod,

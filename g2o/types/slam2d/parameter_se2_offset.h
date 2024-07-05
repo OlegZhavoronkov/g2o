@@ -40,7 +40,7 @@ class VertexSE2;
  */
 class G2O_TYPES_SLAM2D_API ParameterSE2Offset : public Parameter {
  public:
-  EIGEN_MAKE_ALIGNED_OPERATOR_NEW;
+  EIGEN_MAKE_ALIGNED_OPERATOR_NEW
   ParameterSE2Offset();
 
   virtual bool read(std::istream& is);
@@ -71,7 +71,7 @@ class G2O_TYPES_SLAM2D_API ParameterSE2Offset : public Parameter {
  */
 class G2O_TYPES_SLAM2D_API CacheSE2Offset : public Cache {
  public:
-  EIGEN_MAKE_ALIGNED_OPERATOR_NEW;
+  EIGEN_MAKE_ALIGNED_OPERATOR_NEW
   CacheSE2Offset();
   virtual void updateImpl();
 

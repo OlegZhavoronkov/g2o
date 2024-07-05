@@ -41,7 +41,7 @@ namespace tutorial {
 
 class G2O_TUTORIAL_SLAM2D_API SE2 {
  public:
-  EIGEN_MAKE_ALIGNED_OPERATOR_NEW;
+  EIGEN_MAKE_ALIGNED_OPERATOR_NEW
   SE2() : _R(0), _t(0, 0) {}
 
   SE2(double x, double y, double theta) : _R(theta), _t(x, y) {}

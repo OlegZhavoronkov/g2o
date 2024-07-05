@@ -39,7 +39,7 @@ namespace g2o {
 class G2O_TYPES_SBA_API EdgeSE3Expmap
     : public BaseBinaryEdge<6, SE3Quat, VertexSE3Expmap, VertexSE3Expmap> {
  public:
-  EIGEN_MAKE_ALIGNED_OPERATOR_NEW;
+  EIGEN_MAKE_ALIGNED_OPERATOR_NEW
   EdgeSE3Expmap();
 
   bool read(std::istream& is);

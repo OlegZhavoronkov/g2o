@@ -69,7 +69,7 @@ ParameterVector& Cache::parameters() { return _parameters; }
 Cache::CacheKey Cache::key() const {
   Factory* factory = Factory::instance();
   return CacheKey(factory->tag(this), _parameters);
-};
+}
 
 void Cache::update() {
   if (!_updateNeeded) return;

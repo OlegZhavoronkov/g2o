@@ -179,7 +179,7 @@ struct G2O_CORE_API OptimizableGraph : public HyperGraph {
       int dim = estimateDimension();
       if ((dim == -1) || (estimate.size() != dim)) return false;
       return setEstimateData(estimate.derived().data());
-    };
+    }
 
     /**
      * writes the estimater to an array of double
@@ -218,7 +218,7 @@ struct G2O_CORE_API OptimizableGraph : public HyperGraph {
           return false;
       }
       return getEstimateData(estimate.derived().data());
-    };
+    }
 
     /**
      * returns the dimension of the extended representation used by
@@ -254,7 +254,7 @@ struct G2O_CORE_API OptimizableGraph : public HyperGraph {
       int dim = minimalEstimateDimension();
       if ((dim == -1) || (estimate.size() != dim)) return false;
       return setMinimalEstimateData(estimate.derived().data());
-    };
+    }
 
     /**
      * writes the estimate to an array of double
@@ -293,7 +293,7 @@ struct G2O_CORE_API OptimizableGraph : public HyperGraph {
           return false;
       }
       return getMinimalEstimateData(estimate.derived().data());
-    };
+    }
 
     /**
      * returns the dimension of the extended representation used by

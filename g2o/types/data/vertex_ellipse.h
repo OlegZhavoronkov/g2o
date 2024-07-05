@@ -41,7 +41,7 @@ class G2O_TYPES_DATA_API VertexEllipse : public RobotData {
   using myVector2fVector = std::vector<Vector2F>;
 
  public:
-  EIGEN_MAKE_ALIGNED_OPERATOR_NEW;
+  EIGEN_MAKE_ALIGNED_OPERATOR_NEW
   VertexEllipse();
   ~VertexEllipse();
 

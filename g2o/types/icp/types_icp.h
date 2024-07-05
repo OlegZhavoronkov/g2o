@@ -55,7 +55,7 @@ void init();
 //
 
 class G2O_TYPES_ICP_API EdgeGICP {
-  EIGEN_MAKE_ALIGNED_OPERATOR_NEW;
+  EIGEN_MAKE_ALIGNED_OPERATOR_NEW
 
  public:
   // point positions
@@ -143,7 +143,7 @@ class G2O_TYPES_ICP_API EdgeGICP {
 class G2O_TYPES_ICP_API Edge_V_V_GICP
     : public BaseBinaryEdge<3, EdgeGICP, VertexSE3, VertexSE3> {
  public:
-  EIGEN_MAKE_ALIGNED_OPERATOR_NEW;
+  EIGEN_MAKE_ALIGNED_OPERATOR_NEW
   Edge_V_V_GICP() : pl_pl(false) {}
   Edge_V_V_GICP(const Edge_V_V_GICP* e);
 
