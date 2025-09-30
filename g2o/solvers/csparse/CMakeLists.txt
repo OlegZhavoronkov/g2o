@@ -14,12 +14,25 @@ set_target_properties(csparse_extension PROPERTIES
 if (APPLE)
   set_target_properties(csparse_extension PROPERTIES INSTALL_NAME_DIR "${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_LIBDIR}")
 endif()
+set(SSSPARSE_INCLUDE_DIR)
+if(NOT CSPARSE_INCLUDE_DIR STREQUAL "CSPARSE_INCLUDE_DIR-NOTFOUND")
+    set(SSSPARSE_INCLUDE_DIR ${CSPARSE_INCLUDE_DIR})
+elseif (NOT CXSPARSE_INCLUDE_DIR STREQUAL "CXSPARSE_INCLUDE_DIR-NOTFOUND")
+    set(SSSPARSE_INCLUDE_DIR ${CXSPARSE_INCLUDE_DIR})
+endif()
+set(SSSPARSE_LIBRARY)
+if(NOT CSPARSE_LIBRARY STREQUAL "CSPARSE_LIBRARY-NOTFOUND")
+    LIST(APPEND SSSPARSE_LIBRARY ${CSPARSE_LIBRARY})
+endif()
+if(NOT CXSPARSE_LIBRARY STREQUAL "CXSPARSE_LIBRARY-NOTFOUND")
+    LIST(APPEND SSSPARSE_LIBRARY ${CXSPARSE_LIBRARY})
+endif()
 
 target_include_directories(csparse_extension PUBLIC
-  ${CSPARSE_INCLUDE_DIR}
+  ${SSSPARSE_INCLUDE_DIR}
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
   $<INSTALL_INTERFACE:include/g2o/solvers/csparse>)
-target_link_libraries(csparse_extension PUBLIC stuff ${CSPARSE_LIBRARY} ${G2O_EIGEN3_EIGEN_TARGET})
+target_link_libraries(csparse_extension PUBLIC stuff ${SSSPARSE_LIBRARY} ${G2O_EIGEN3_EIGEN_TARGET})
 
 add_library(solver_csparse ${G2O_LIB_TYPE}
   solver_csparse.cpp
@@ -36,7 +49,7 @@ if (APPLE)
 endif()
 
 target_include_directories(solver_csparse PUBLIC
-  $<BUILD_INTERFACE:${CSPARSE_INCLUDE_DIR}>
+  $<BUILD_INTERFACE:${SSSPARSE_INCLUDE_DIR}>
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
   $<INSTALL_INTERFACE:include/g2o/solvers/csparse>)
 target_compile_features(solver_csparse PUBLIC cxx_std_17)
