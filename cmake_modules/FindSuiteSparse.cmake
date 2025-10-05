@@ -121,8 +121,12 @@ if (NOT SuiteSparse_NO_CMAKE)
             LIST(REMOVE_ITEM SuiteSparseSubDirs2 "SuiteSparse_GPURuntime")
             set(SuiteSparseSubDirs2 "SuiteSparse_GPURuntime;${SuiteSparseSubDirs2}")
         endif()
+        
         foreach(sd IN ITEMS ${SuiteSparseSubDirs2})
             LIST(APPEND CMAKE_PREFIX_PATH ${CUSTOM_SUITESPARSE_FOLDER_LIB}/cmake/${sd})
+        endforeach()
+        
+        foreach(sd IN ITEMS ${SuiteSparseSubDirs2})
             find_package(${sd} QUIET)
             message(STATUS "\${${sd}_FOUND} \"${${sd}_FOUND}\"")
             if(NOT ${${sd}_FOUND})
