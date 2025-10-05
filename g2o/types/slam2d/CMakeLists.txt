@@ -16,7 +16,7 @@ add_library(types_slam2d ${G2O_LIB_TYPE}
   edge_xy_prior.cpp		edge_xy_prior.h
   g2o_types_slam2d_api.h
 )
-
+add_library(${ALIAS_LIB_PREFIX}::types_slam2d ALIAS types_slam2d)
 set_target_properties(types_slam2d PROPERTIES OUTPUT_NAME ${LIB_PREFIX}types_slam2d)
 set_target_properties(types_slam2d PROPERTIES
   VERSION ${G2O_LIB_VERSION}

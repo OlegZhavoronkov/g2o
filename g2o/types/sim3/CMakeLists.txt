@@ -2,7 +2,7 @@ add_library(types_sim3 ${G2O_LIB_TYPE}
   types_seven_dof_expmap.cpp
   types_seven_dof_expmap.h
 )
-
+add_library(${ALIAS_LIB_PREFIX}::types_sim3 ALIAS types_sim3)
 set_target_properties(types_sim3 PROPERTIES OUTPUT_NAME ${LIB_PREFIX}types_sim3)
 set_target_properties(types_sim3 PROPERTIES
   VERSION ${G2O_LIB_VERSION}

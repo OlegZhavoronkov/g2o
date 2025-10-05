@@ -10,7 +10,7 @@ add_library(stuff ${G2O_LIB_TYPE}
   logger.cpp logger.h
   g2o_stuff_api.h
 )
-
+add_library(${ALIAS_LIB_PREFIX}::stuff ALIAS stuff)
 target_include_directories(stuff PUBLIC
   "$<BUILD_INTERFACE:${g2o_SOURCE_DIR};${PROJECT_BINARY_DIR}>"
   $<INSTALL_INTERFACE:include/g2o/stuff>
@@ -47,6 +47,7 @@ if(OPENGL_FOUND AND G2O_HAVE_OPENGL)
   add_library(opengl_helper ${G2O_LIB_TYPE}
     opengl_primitives.cpp opengl_primitives.h
     )
+  add_library(${ALIAS_LIB_PREFIX}::opengl_helper ALIAS opengl_helper)
   if (APPLE)
     set_target_properties(opengl_helper PROPERTIES INSTALL_NAME_DIR "${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_LIBDIR}")
   endif()

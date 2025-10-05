@@ -6,7 +6,7 @@ add_library(types_sclam2d ${G2O_LIB_TYPE}
   types_sclam2d.cpp types_sclam2d.h
   g2o_types_sclam2d_api.h
 )
-
+add_library(${ALIAS_LIB_PREFIX}::types_sclam2d ALIAS types_sclam2d)
 set_target_properties(types_sclam2d PROPERTIES OUTPUT_NAME ${LIB_PREFIX}types_sclam2d)
 set_target_properties(types_sclam2d PROPERTIES
   VERSION ${G2O_LIB_VERSION}

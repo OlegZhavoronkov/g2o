@@ -40,6 +40,7 @@ robust_kernel_factory.cpp robust_kernel_factory.h
 io_helper.h
 g2o_core_api.h
 )
+add_library(${ALIAS_LIB_PREFIX}::core ALIAS core)
 
 target_include_directories(core PUBLIC
   "$<BUILD_INTERFACE:${g2o_SOURCE_DIR};${PROJECT_BINARY_DIR}>"

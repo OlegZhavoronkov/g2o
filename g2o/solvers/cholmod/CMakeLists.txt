@@ -11,7 +11,7 @@ add_library(solver_cholmod ${G2O_LIB_TYPE}
   cholmod_wrapper.cpp
   solver_cholmod.cpp
 )
-
+add_library(${ALIAS_LIB_PREFIX}::solver_cholmod ALIAS solver_cholmod)
 target_include_directories(solver_cholmod PUBLIC
     $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>
     $<INSTALL_INTERFACE:include/g2o/solvers/cholmod>)

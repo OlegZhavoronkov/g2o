@@ -29,7 +29,7 @@ add_library(types_sba ${G2O_LIB_TYPE}
   edge_project_xyz_onlypose.cpp edge_project_xyz_onlypose.h
   edge_project_stereo_xyz_onlypose.cpp edge_project_stereo_xyz_onlypose.h
 )
-
+add_library(${ALIAS_LIB_PREFIX}::types_sba ALIAS types_sba)
 set_target_properties(types_sba PROPERTIES OUTPUT_NAME ${LIB_PREFIX}types_sba)
 set_target_properties(types_sba PROPERTIES
   VERSION ${G2O_LIB_VERSION}

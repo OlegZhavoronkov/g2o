@@ -7,6 +7,7 @@ add_library(csparse_extension ${G2O_LGPL_LIB_TYPE}
   csparse_extension.cpp csparse_extension.h
   g2o_csparse_extension_api.h
 )
+add_library(${ALIAS_LIB_PREFIX}::csparse_extension ALIAS csparse_extension)
 set_target_properties(csparse_extension PROPERTIES OUTPUT_NAME ${LIB_PREFIX}csparse_extension)
 set_target_properties(csparse_extension PROPERTIES
   VERSION ${G2O_LIB_VERSION}
@@ -40,6 +41,9 @@ add_library(solver_csparse ${G2O_LIB_TYPE}
   linear_solver_csparse.h
   g2o_csparse_api.h
 )
+
+add_library(${ALIAS_LIB_PREFIX}::solver_csparse ALIAS solver_csparse)
+
 set_target_properties(solver_csparse PROPERTIES OUTPUT_NAME ${LIB_PREFIX}solver_csparse)
 set_target_properties(solver_csparse PROPERTIES
   VERSION ${G2O_LIB_VERSION}

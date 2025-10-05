@@ -2,7 +2,7 @@ add_library(types_icp ${G2O_LIB_TYPE}
   types_icp.cpp  types_icp.h
   g2o_types_icp_api.h
 )
-
+add_library(${ALIAS_LIB_PREFIX}::types_icp ALIAS types_icp)
 set_target_properties(types_icp PROPERTIES OUTPUT_NAME ${LIB_PREFIX}types_icp)
 set_target_properties(types_icp PROPERTIES
   VERSION ${G2O_LIB_VERSION}

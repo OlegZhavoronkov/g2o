@@ -1,5 +1,5 @@
 add_library(g2o_ceres_ad INTERFACE)
-
+add_library(${ALIAS_LIB_PREFIX}::g2o_ceres_ad ALIAS g2o_ceres_ad)
 install(TARGETS g2o_ceres_ad
   EXPORT ${G2O_TARGETS_EXPORT_NAME}
   RUNTIME DESTINATION ${RUNTIME_DESTINATION}

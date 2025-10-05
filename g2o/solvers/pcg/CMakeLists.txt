@@ -3,7 +3,7 @@ add_library(solver_pcg ${G2O_LIB_TYPE}
   linear_solver_pcg.h
   linear_solver_pcg.hpp
 )
-
+add_library(${ALIAS_LIB_PREFIX}::solver_pcg ALIAS solver_pcg)
 set_target_properties(solver_pcg PROPERTIES OUTPUT_NAME ${LIB_PREFIX}solver_pcg)
 set_target_properties(solver_pcg PROPERTIES
   VERSION ${G2O_LIB_VERSION}

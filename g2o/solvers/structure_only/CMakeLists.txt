@@ -2,7 +2,7 @@ add_library(solver_structure_only ${G2O_LIB_TYPE}
   structure_only.cpp
   structure_only_solver.h
 )
-
+add_library(${ALIAS_LIB_PREFIX}::solver_structure_only ALIAS solver_structure_only)
 set_target_properties(solver_structure_only PROPERTIES OUTPUT_NAME ${LIB_PREFIX}solver_structure_only)
 set_target_properties(solver_structure_only PROPERTIES
   VERSION ${G2O_LIB_VERSION}

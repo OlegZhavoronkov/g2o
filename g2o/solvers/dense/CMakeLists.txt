@@ -1,7 +1,7 @@
 add_library(solver_dense ${G2O_LIB_TYPE}
   solver_dense.cpp linear_solver_dense.h
 )
-
+add_library(${ALIAS_LIB_PREFIX}::solver_dense ALIAS solver_dense)
 set_target_properties(solver_dense PROPERTIES OUTPUT_NAME ${LIB_PREFIX}solver_dense)
 set_target_properties(solver_dense PROPERTIES
   VERSION ${G2O_LIB_VERSION}

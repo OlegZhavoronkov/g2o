@@ -9,7 +9,8 @@ include(CPack)
 include(GNUInstallDirs)
 
 # The library prefix
-set(LIB_PREFIX g2o_)
+set(ALIAS_LIB_PREFIX g2o)
+set(LIB_PREFIX ${ALIAS_LIB_PREFIX}_)
 
 set(g2o_C_FLAGS)
 set(g2o_CXX_FLAGS)

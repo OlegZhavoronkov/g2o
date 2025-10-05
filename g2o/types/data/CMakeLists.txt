@@ -9,7 +9,7 @@ add_library(types_data ${G2O_LIB_TYPE}
   data_queue.cpp data_queue.h
   g2o_types_data_api.h
 )
-
+add_library(${ALIAS_LIB_PREFIX}::types_data ALIAS types_data)
 set_target_properties(types_data PROPERTIES OUTPUT_NAME ${LIB_PREFIX}types_data)
 set_target_properties(types_data PROPERTIES
   VERSION ${G2O_LIB_VERSION}

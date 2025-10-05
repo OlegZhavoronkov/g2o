@@ -3,7 +3,7 @@ add_library(solver_slam2d_linear ${G2O_LIB_TYPE}
   solver_slam2d_linear.h solver_slam2d_linear.cpp
   g2o_slam2d_linear_api.h
 )
-
+add_library(${ALIAS_LIB_PREFIX}::solver_slam2d_linear ALIAS solver_slam2d_linear)
 set_target_properties(solver_slam2d_linear PROPERTIES OUTPUT_NAME ${LIB_PREFIX}solver_slam2d_linear)
 set_target_properties(solver_slam2d_linear PROPERTIES
   VERSION ${G2O_LIB_VERSION}

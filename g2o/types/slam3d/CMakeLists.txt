@@ -39,7 +39,7 @@ add_library(types_slam3d ${G2O_LIB_TYPE}
   types_slam3d.h
 )
 
-
+add_library(${ALIAS_LIB_PREFIX}::types_slam3d ALIAS types_slam3d)
 set_target_properties(types_slam3d PROPERTIES OUTPUT_NAME ${LIB_PREFIX}types_slam3d)
 set_target_properties(types_slam3d PROPERTIES
   VERSION ${G2O_LIB_VERSION}

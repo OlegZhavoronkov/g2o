@@ -15,7 +15,7 @@ add_library(types_slam3d_addons ${G2O_LIB_TYPE}
   types_slam3d_addons.cpp
   types_slam3d_addons.h
 )
-
+add_library(${ALIAS_LIB_PREFIX}::types_slam3d_addons ALIAS types_slam3d_addons)
 
 set_target_properties(types_slam3d_addons PROPERTIES OUTPUT_NAME ${LIB_PREFIX}types_slam3d_addons)
 set_target_properties(types_slam3d_addons PROPERTIES
